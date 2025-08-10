@@ -1,15 +1,11 @@
 import {
   startOfMonth,
-  endOfMonth,
   startOfWeek,
   addDays,
   format,
   isSameMonth,
 } from 'date-fns';
 
-/**
- * Returns array of ISO date strings (yyyy-MM-dd) for a full month grid (6x7 = 42 days)
- */
 export function getMonthGridDates(year: number, month: number) {
   const monthStart = startOfMonth(new Date(year, month));
   const gridStart = startOfWeek(monthStart, { weekStartsOn: 0 });
